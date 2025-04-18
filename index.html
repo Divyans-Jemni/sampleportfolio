@@ -11,312 +11,11 @@
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
-    <style>
-        .publication-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .publication-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .publication-header {
-            position: relative;
-            padding-bottom: 30px;
-        }
-
-        .publication-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .publication-journal {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-
-        .publication-arrow {
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            transition: transform 0.3s ease;
-        }
-
-        .publication-card.expanded .publication-arrow {
-            transform: translateX(-50%) rotate(180deg);
-        }
-
-        .publication-content {
-            padding-top: 15px;
-        }
-
-        .publication-description {
-            text-align: left;
-            margin-bottom: 15px;
-        }
-
-        .publication-link {
-            display: inline-block;
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .publication-link:hover {
-            color: #0056b3;
-        }
-
-        .testimonial-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .testimonial-header {
-            position: relative;
-            padding-bottom: 30px;
-            text-align: center;
-        }
-
-        .testimonial-card-img-holder {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-
-        .testimonial-card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .testimonial-card-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-arrow {
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            transition: transform 0.3s ease;
-        }
-
-        .testimonial-card.expanded .testimonial-arrow {
-            transform: translateX(-50%) rotate(180deg);
-        }
-
-        .testimonial-content {
-            padding-top: 15px;
-        }
-
-        .testimonial-card-subtitle {
-            text-align: left;
-            margin-bottom: 15px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .testimonial-card-role {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-            font-style: italic;
-        }
-
-        .testimonial-link {
-            color: #007bff;
-            font-size: 1.2rem;
-            margin-left: 10px;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            vertical-align: middle;
-        }
-
-        .testimonial-link:hover {
-            color: #0056b3;
-        }
-
-        .testimonial-link i {
-            font-size: 1.2rem;
-        }
-
-        .about-img-holder {
-            margin-bottom: 2rem;
-        }
-
-        .about-img-wrapper {
-            width: 250px;
-            height: 250px;
-            margin: 0 auto;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 5px solid #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .about-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .leadership-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .leadership-img-wrapper {
-            width: 100%;
-            height: 300px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .leadership-img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-        }
-
-        .leadership-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: #333;
-        }
-
-        .leadership-description {
-            text-align: left;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .leadership-summary {
-            text-align: center;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 15px;
-            font-style: italic;
-            padding: 0 1.5em;
-        }
-
-        .leadership-content {
-            position: relative;
-            padding-bottom: 30px;
-        }
-
-        .leadership-arrow {
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }
-
-        .leadership-card.expanded .leadership-arrow {
-            transform: translateX(-50%) rotate(180deg);
-        }
-
-        .animate-title {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 1s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .typing-text {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid #fff;
-            width: 0;
-            animation: typing 3.5s steps(40, end) forwards;
-            animation-delay: 2s;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        .header-content {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
-
-        .header-title {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .header-title .up,
-        .header-title .down {
-            display: block;
-            margin: 0;
-        }
-
-        .header-subtitle {
-            color: #fff;
-            font-weight: normal;
-            margin-bottom: 2rem;
-            font-size: 1.2rem;
-        }
-    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
 
-    <!-- Page Navbar -->
+    <!-- Page Navbars -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="logo" href="#">Design is thinking made visual</a>
@@ -328,13 +27,10 @@
                     <a class="link" href="#about">About</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#experience">Experience</a>
+                    <a class="link" href="#testmonial">Testmonial</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#blog">Projects</a>
-                </li>
-                <li class="item">
-                    <a class="link" href="#testmonial">Testimonials</a>
+                    <a class="link" href="#blog">Project</a>
                 </li>
                 <li class="item">
                     <a class="link" href="#contact">Contact</a>
@@ -357,18 +53,20 @@
                 <span class="down">I am Divyans Jemni</span>
             </h1>
             <p class="header-subtitle">Product Enthusiast</p>
+
             <a href="https://github.com/Divyans-Jemni" target="_blank"><button class="btn btn-primary">Visit My Works</button></a>
         </div>
     </header><!-- end of page header -->
 
     <!-- about section -->
     <section class="section pt-0" id="about">
+        <!-- container -->
         <div class="container text-center">
+            <!-- about wrapper -->
             <div class="about">
                 <div class="about-img-holder">
-                    <div class="about-img-wrapper">
-                        <img src="assets/imgs/divyans.JPEG" class="about-img" alt="Profile Image">
-                    </div>
+                    <img src="assets/imgs/man_image.png" class="about-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
                 <div class="about-caption">
                     <p class="section-subtitle">Who Am I ?</p>
@@ -379,578 +77,151 @@
                     </p>
                     <a href="https://drive.google.com/file/d/1vvGZk9SuIs6oDQnuCfUuBOm4opN0Gnm8/view?usp=sharing" target="_blank"><button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button></a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- experience section -->
-    <section class="section pt-0" id="experience">
-        <div class="container">
-            <div class="text-center">
-                <p class="section-subtitle">What I've Done</p>
-                <h2 class="section-title mb-6">Work Experience</h2>
-            </div>
-            
-            <!-- Timeline Container -->
-            <div class="timeline">
-                <!-- Accenture Entry -->
-                <div class="timeline-item">
-                    <div class="timeline-img-container">
-                        <img src="assets/imgs/Accenture_logo.png" class="timeline-img" alt="Accenture Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Accenture</h3>
-                            <p class="timeline-position">Data Engineer</p>
-                            <p class="timeline-period">2021 - 2024</p>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Authored ETL pipelines using Python, SQL, facilitating the integration of raw data from diverse sources into targeted data mart in data warehouse contributing to streamlined data processing and storage</li>
-                            <li>Spearheaded migration of 200K user credentials for SSO access, bolstering app security and reducing login errors by 40%</li>
-                            <li>Ushered a user-friendly Tableau dashboard for tracking a $1.5M project budget, enabling real-time insights enabled the team to identify and address potential budget issues early on, preventing cost overruns exceeding $50,000</li>
-                            <li>Automated 80+ GUI tests using Selenium and TestNG, increasing coverage by 40% and reducing manual effort</li>
-                            <li>Conducted GCP-based performance testing, enhancing platform scalability by 10% and improving deployment stability</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- TVS Entry -->
-                <div class="timeline-item">
-                    <div class="timeline-img-container">
-                        <img src="assets/imgs/tvs_logo.jpg" class="timeline-img" alt="TVS Supply Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">TVS Supply Chain Sol.</h3>
-                            <p class="timeline-position">Supply Chain Intern</p>
-                            <p class="timeline-period">2020 - 2021</p>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Improved inventory accuracy through Excel and Power BI analytics, enabling data-driven decision making for stock optimization</li>
-                            <li>Streamlined warehouse operations using SAP Inventory Management system, reducing stockouts and improving order fulfillment</li>
-                            <li>Developed and implemented standard operating procedures for material handling, resulting in reduction in processing time</li>
-                            <li>Created automated inventory reports using Power BI dashboards, providing real-time visibility into stock levels and movement</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Escorts Entry -->
-                <div class="timeline-item">
-                    <div class="timeline-img-container">
-                        <img src="assets/imgs/escorts_logo.png" class="timeline-img" alt="Escorts Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="timeline-title">Escorts Limited</h3>
-                            <p class="timeline-position">Summer Intern</p>
-                            <p class="timeline-period">2019</p>
-                        </div>
-                        <ul class="timeline-description">
-                            <li>Led product documentation team in creating comprehensive instruction manuals by analyzing customer usage patterns and conducting user interviews, reducing support tickets</li>
-                            <li>Implemented agile methodologies to iteratively improve product documentation based on customer feedback, resulting in higher user comprehension scores</li>
-                            <li>Collaborated with engineering teams to document technical specifications and created user-friendly guides for complex product features, increasing first-time setup success rate</li>
-                            <li>Utilized A/B testing to optimize instruction manual layouts and content, leading to reduction in customer confusion points</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- education section -->
-    <section class="section pt-0" id="education">
-        <div class="container text-center">
-            <p class="section-subtitle">My Academic Journey</p>
-            <h2 class="section-title mb-6">Education</h2>
-            <div class="row d-flex align-items-stretch">
-                <div class="col-md-6 mb-4">
-                    <div class="experience-card h-100 d-flex flex-column">
-                        <div class="experience-img-holder mb-3">
-                            <img src="assets/imgs/nu_logo.png" class="experience-img rounded-circle" alt="Northeastern University Logo">
-                        </div>
-                        <div class="experience-title-wrapper mb-3">
-                            <h5 class="experience-title mb-1">Northeastern University</h5>
-                            <p class="experience-subtitle mb-1">Master of Science in Information Systems</p>
-                            <p class="experience-duration mb-1">2024 - Present</p>
-                        </div>
-                        <div class="experience-caption flex-grow-1">
-                            <p class="experience-description text-left" style="padding-left: 1.5em; text-indent: -1.5em;">
-                                <span style="font-weight: 900;">•</span> <b>Relevant Coursework:</b> Application Engineering and Development, Data Science Engineering Methods, Data Management and Database Design, User Experience Design and Testing<br>
-                                <span style="font-weight: 900;">•</span> <b>GPA:</b> 3.74/4.0
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 mb-4">
-                    <div class="experience-card h-100 d-flex flex-column">
-                        <div class="experience-img-holder mb-3">
-                            <img src="assets/imgs/Manipal_logo.png" class="experience-img rounded-circle" alt="GGSIPU Logo">
-                        </div>
-                        <div class="experience-title-wrapper mb-3">
-                            <h5 class="experience-title mb-1">Manipal University Jaipur</h5>
-                            <p class="experience-subtitle mb-1">Bachelor of Technology in Automobile Engineering</p>
-                            <p class="experience-duration mb-1">2017 - 2021</p>
-                        </div>
-                        <div class="experience-caption flex-grow-1">
-                            <p class="experience-description text-left" style="padding-left: 1.5em; text-indent: -1.5em;">
-                                <span style="font-weight: 900;">•</span> <b>Relevant Coursework:</b> Organization And Management, Value Ethics And Governance, Quality Assurance And Reliability Engineering, Statistical Process and Quality Control
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- end of education section -->
-
-    <!-- publications section -->
-    <section class="section pt-0" id="publications">
-        <div class="container text-center">
-            <p class="section-subtitle">My Research Work</p>
-            <h2 class="section-title mb-6">Publication</h2>
-            <div class="row">
-                <div class="col-md-6 mx-auto">
-                    <div class="publication-card" onclick="togglePublication(this)">
-                        <div class="publication-header">
-                            <h5 class="publication-title">"Prediction of Ground Water Level in Rajasthan State Using Machine Learning"</h5>
-                            <p class="publication-journal">Procedia Computer Science, Vol 218, 2023, (pp 1702-1711), ISSN 1877-0509</p>
-                            <div class="publication-arrow">
-                                <i class="ti-angle-down"></i>
-                            </div>
-                        </div>
-                        <div class="publication-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
-                            <p class="publication-description">
-                                <span style="font-weight: 900;">•</span> The purpose of the study was to score a model that can explicitly predict the fluctuation in the groundwater level based on various external factors that are used as features in this research<br>
-                                <span style="font-weight: 900;">•</span> The drastic groundwater levels in different parts of Rajasthan can be attributed to many factors, principally hydrogeological formation, Precipitation, and chemical composition<br>
-                                <span style="font-weight: 900;">•</span> All factors discussed in the paper are strongly correlated to the resulting fluctuation in the GWL<br>
-                                <span style="font-weight: 900;">•</span> For the accuracy and intricacy of the study, strongly/moderately correlated components were chosen<br>
-                                <span style="font-weight: 900;">•</span> The paper has been selected by the International Congress For Research Excellence for the International Best Researcher Award
-                            </p>
-                            <a href="https://doi.org/10.1016/j.procs.2023.01.148" class="publication-link" target="_blank">Read Publication <i class="ti-angle-double-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- end of publications section -->
-
-    <!-- skills section -->
-    <section class="section pt-0" id="skills">
-        <div class="container text-center">
-            <p class="section-subtitle">What I'm Good At</p>
-            <h2 class="section-title mb-6">Skills</h2>
-            
-            <div class="skills-container">
-                <div class="skills-track">
-                    <!-- First set of skills -->
-                    <div class="skill-item">
-                        <img src="assets/imgs/python_logo.png" alt="Python" class="skill-img">
-                        <p class="skill-name">Python</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/sql_logo.png" alt="SQL" class="skill-img">
-                        <p class="skill-name">SQL</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/tableau_logo.png" alt="Tableau" class="skill-img">
-                        <p class="skill-name">Tableau</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/powerbi_logo.png" alt="Power BI" class="skill-img">
-                        <p class="skill-name">Power BI</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/selenium_logo.png" alt="Selenium" class="skill-img">
-                        <p class="skill-name">Selenium</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/gcp_logo.png" alt="GCP" class="skill-img">
-                        <p class="skill-name">GCP</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/azure_logo.png" alt="Azure" class="skill-img">
-                        <p class="skill-name">Azure</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/java_logo.png" alt="Java" class="skill-img">
-                        <p class="skill-name">Java</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/html_logo.png" alt="HTML" class="skill-img">
-                        <p class="skill-name">HTML</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/css_logo.png" alt="CSS" class="skill-img">
-                        <p class="skill-name">CSS</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/figma_logo.png" alt="Figma" class="skill-img">
-                        <p class="skill-name">Figma</p>
-                    
-                    </div><div class="skill-item">
-                        <img src="assets/imgs/power.png" alt="Microsoft Power Automate" class="skill-img">
-                        <p class="skill-name">Microsoft Power Automate</p>
-                    </div>
-                  
-                    
-                    <!-- Duplicate set of skills for continuous scrolling -->
-                    <div class="skill-item">
-                        <img src="assets/imgs/python_logo.png" alt="Python" class="skill-img">
-                        <p class="skill-name">Python</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/sql_logo.png" alt="SQL" class="skill-img">
-                        <p class="skill-name">SQL</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/tableau_logo.png" alt="Tableau" class="skill-img">
-                        <p class="skill-name">Tableau</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/powerbi_logo.png" alt="Power BI" class="skill-img">
-                        <p class="skill-name">Power BI</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/selenium_logo.png" alt="Selenium" class="skill-img">
-                        <p class="skill-name">Selenium</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/gcp_logo.png" alt="GCP" class="skill-img">
-                        <p class="skill-name">GCP</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/azure_logo.png" alt="Azure" class="skill-img">
-                        <p class="skill-name">Azure</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/java_logo.png" alt="Java" class="skill-img">
-                        <p class="skill-name">Java</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/html_logo.png" alt="HTML" class="skill-img">
-                        <p class="skill-name">HTML</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/css_logo.png" alt="CSS" class="skill-img">
-                        <p class="skill-name">CSS</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/figma_logo.png" alt="Figma" class="skill-img">
-                        <p class="skill-name">Figma</p>
-                    </div>
-                    <div class="skill-item">
-                        <img src="assets/imgs/jira_logo.png" alt="Jira" class="skill-img">
-                        <p class="skill-name">Jira</p>
-                    </div><div class="skill-item">
-                        <img src="assets/imgs/power.png" alt="Microsoft Power Automate" class="skill-img">
-                        <p class="skill-name">Microsoft Power Automate</p>
-                    </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section><!-- end of skills section -->
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
 
     <!-- blog section -->
     <section class="section" id="blog">
+        <!-- container -->
         <div class="container text-center">
             <p class="section-subtitle">Recent Works?</p>
-            <h6 class="section-title mb-6">Projects</h6>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="experience-card h-100 d-flex flex-column">
-                        <div class="blog-card-header mb-3" style="height: 200px; overflow: hidden;">
-                            <img src="assets/imgs/farmer_logo.png" class="blog-card-img w-100 h-100" alt="E-Farmer Project" style="object-fit: cover;">
-                        </div>
-                        <div class="experience-caption">
-                            <h5 class="experience-title mb-3">E-Farmer: Online Farming Shopping Portal</h5>
-                            <p class="experience-description" style="padding-left: 1.5em; text-indent: -1.5em;">
-                                <span style="font-weight: 900;">•</span> • Developed an ETL pipeline on Oracle Cloud to ingest transactional data into a scalable OL TP system with a structured SQL schema and real-time
-                                dashboards, reducing processing delays by 40% and improving farmer-to-consumer access by 30%<br>
-                                <span style="font-weight: 900;">•</span> Conducted competitive analysis to identify market gaps within the virtual store navigation system, and improved user experience efficiency by
-                                25%<br>
-                                <span style="font-weight: 900;">•</span>  Created a performance-tracking dashboard in Tableau, providing real-time insights into user behavior and optimizing store layout dynamically
-                            </p>
-                            <a href="https://github.com/Divyans-Jemni/E-Farmer" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                        </div>
-                    </div>
+            <h6 class="section-title mb-6">Projects & Publication</h6>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="assets/imgs/farmer_logo.png" class="blog-card-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">E-Farmer: Online Farming Shopping Portal</h6>
 
-                <div class="col-md-4 mb-4">
-                    <div class="experience-card h-100 d-flex flex-column">
-                        <div class="blog-card-header mb-3" style="height: 200px; overflow: hidden;">
-                            <img src="assets/imgs/venmo_logo.png" class="blog-card-img w-100 h-100" alt="Venmo UX Redesign" style="object-fit: cover;">
-                        </div>
-                        <div class="experience-caption">
-                            <h5 class="experience-title mb-3">Venmo UX Redesign</h5>
-                            <p class="experience-description" style="padding-left: 1.5em; text-indent: -1.5em;">
-                                <span style="font-weight: 900;">•</span> Spearheaded cross-functional collaboration to redesign a financial app's user experience, improving security features and introducing
-                                investment options that increased user retention by 22% modifications based on control breakpoints<br>
-                                <span style="font-weight: 900;">•</span> Analyzed user workflows and identified critical control breakpoints, recommending strategic UX modifications that enhanced transaction
-                                security by 35%<br>
-                                <span style="font-weight: 900;">•</span> Cataloged analytical processes and project resources with a detailed Project Plan, leading to a 10% increase in efficiency
-                            </p>
-                            <a href="https://www.figma.com/design/UUnBBpTTh7bjXlwauRybJU/Venmo---Figma_Redesign?node-id=0-1&t=D3ieVjPfUijwtXZP-1" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                        </div>
-                    </div>
+                        <li>Developed a scalable OLTP system with a relational database schema, enabling real-time transactions for 500+ farmers and consumers,
+                            reducing intermediary dependency by 30%, and enhancing supply chain transparency</li>
+
+                        <li>Optimized inventory management and order processing by engineering automated systems and comprehensive data views, cutting
+                            processing time by 40% and empowering stakeholders with real-time, data-driven decision-making
+                        </li>
+                        <li>MConducted stakeholder interviews and competitive analysis to identify user needs, informing MVP feature list and aligning development
+                            with farmer expectations.</li>
+
+                        <a href="https://github.com/Divyans-Jemni/E-Farmer" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
                 </div>
+            </div><!-- end of blog wrapper -->
 
-                <div class="col-md-4 mb-4">
-                    <div class="experience-card h-100 d-flex flex-column">
-                        <div class="blog-card-header mb-3" style="height: 200px; overflow: hidden;">
-                            <img src="assets/imgs/price_logo.png" class="blog-card-img w-100 h-100" alt="Price Navigator" style="object-fit: cover;">
-                        </div>
-                        <div class="experience-caption">
-                            <h5 class="experience-title mb-3">Price Navigator</h5>
-                            <p class="experience-description" style="padding-left: 1.5em; text-indent: -1.5em;">
-                                <span style="font-weight: 900;">•</span> Engineered an application using Java and Java Swing framework to process market trend data and supplier information, improving pricing accuracy<br>
-                                <span style="font-weight: 900;">•</span> Implemented SMTP protocol within the Java application to deliver real-time email alerts to users, ensuring immediate notification of critical pricing changes<br>
-                                <span style="font-weight: 900;">•</span> Implemented data quality controls within the Java framework to ensure consistency and reliability of pricing information<br>
-                                <span style="font-weight: 900;">•</span> Conducted risk identification and prioritization for system implementation, enhancing overall solution reliability<br>
-
-                            </p>
-                            <a href="https://github.com/Divyans-Jemni/Price-Navigator" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
-                        </div>
-                    </div>
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="assets/imgs/venmo_logo.png" class="blog-card-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">Venmo UX Redesign</h6>
+
+
+
+                        <li>Conducted user research through empathy mapping, personas, and feedback analysis to uncover pain points in Venmo’s shared expense
+                            features, informing key areas for UX improvement</li>
+                            <li>Performed competitive analysis and proposed enhancements like automated bill-splitting and financial education modules, resulting
+                                in a user-centric redesign aligned with market needs and usability goals</li>
+
+                        <a href="https://github.com/Divyans-Jemni/E-Farmer" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+            <!-- blog-wrapper -->
+            <div class="blog-card">
+                <div class="blog-card-header">
+                    <img src="assets/imgs/price_logo.png" class="blog-card-img"
+                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                </div>
+                <div class="blog-card-body">
+                    <h5 class="blog-card-title">Price Navigator</h6>
+
+
+
+                        <li>Formulated and tested a business rule-driven pricing system with documented controls for data updates and input validation, ensuring
+                            alignment between front-end logic and backend configuration audits</li>
+                            <li>Created auto-alert dashboards and reporting features to support strategic decision-making across procurement teams</li>
+
+                        <a href="https://github.com/Divyans-Jemni/Price-Navigator" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
+                </div>
+            </div><!-- end of blog wrapper -->
+
+        </div><!-- end of container -->
+    </section><!-- end of blog section -->
+
 
     <!-- testimonial section -->
     <section class="section" id="testmonial">
         <div class="container text-center">
             <p class="section-subtitle">What Think Client About Me ?</p>
-            <h6 class="section-title mb-6">Testimonials <a href="https://www.linkedin.com/in/divyansjemni/details/recommendations/?detailScreenTabIndex=0" target="_blank" class="testimonial-link"><i class="ti-link"></i></a></h6>
+            <h6 class="section-title mb-6">Testmonial</h6>
+
+            <!-- row -->
             <div class="row">
                 <div class="col-md-6">
-                    <div class="testimonial-card" onclick="toggleTestimonial(this)">
-                        <div class="testimonial-header">
-                            <div class="testimonial-card-img-holder">
-                                <img src="assets/imgs/varun.png" class="testimonial-card-img" alt="Varun Gupta">
-                            </div>
-                            <h6 class="testimonial-card-title">Varun Gupta</h6>
-                            <p class="testimonial-card-role">Senior Manager, Accenture</p>
-                            <div class="testimonial-arrow">
-                                <i class="ti-angle-down"></i>
-                            </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="assets/imgs/varun.png" class="testimonial-card-img"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                         </div>
-                        <div class="testimonial-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                        <div class="testimonial-card-body">
                             <p class="testimonial-card-subtitle">I had the pleasure of working with Divyans on multiple projects where he excelled as both a developer and a tester. His primary focus was on test automation, and I was impressed by his rapid growth in this area.
                                 Divyansh is a reliable and collaborative team member with strong problem-solving skills. He possesses excellent analytical abilities and a keen eye for detail, which made him a valuable asset to our team. His eagerness to learn and apply new knowledge is commendable. I am confident in his ability to continue to excel in his career as a software tester and automation engineer.</p>
+                            <h6 class="testimonial-card-title">Varun Gupta</h6>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="testimonial-card" onclick="toggleTestimonial(this)">
-                        <div class="testimonial-header">
-                            <div class="testimonial-card-img-holder">
-                                <img src="assets/imgs/rehan.png" class="testimonial-card-img" alt="Rehan Mukadam">
-                            </div>
-                            <h6 class="testimonial-card-title">Rehan Mukadam</h6>
-                            <p class="testimonial-card-role">Lead Tester, Accenture</p>
-                            <div class="testimonial-arrow">
-                                <i class="ti-angle-down"></i>
-                            </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-img-holder">
+                            <img src="assets/imgs/rehan.png" class="testimonial-card-img"
+                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                         </div>
-                        <div class="testimonial-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
+                        <div class="testimonial-card-body">
                             <p class="testimonial-card-subtitle">Me and Divyans were working on the same project at Accenture as a Lead Tester for the project.
                                 I have seen his growth very closely he is very dedicated toward whatever he does 
                                 I would like to Recommend Divyans on whatever Opportunity he is looking ahead
                                 I am Sure he will excel in all the things he do and make sure he complete his work on time 
                                 Thanks</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card" onclick="toggleTestimonial(this)">
-                        <div class="testimonial-header">
-                            <div class="testimonial-card-img-holder">
-                                <img src="assets/imgs/tanmay.png" class="testimonial-card-img" alt="Tanmay Dhapodkar">
-                            </div>
-                            <h6 class="testimonial-card-title">Tanmay Dhapodkar</h6>
-                            <p class="testimonial-card-role">Quality Assurance Lead, Accenture</p>
-                            <div class="testimonial-arrow">
-                                <i class="ti-angle-down"></i>
-                            </div>
-                        </div>
-                        <div class="testimonial-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
-                            <p class="testimonial-card-subtitle">Divyans and I were working together in a critical project handled by Accenture for our clients. Overall it was a great experience working with him and he meticulously did all the task assigned during the Quality assurance plus used to ask questions whenever required in a initial phase. He has been proactive throughout the tenure working with me.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card" onclick="toggleTestimonial(this)">
-                        <div class="testimonial-header">
-                            <div class="testimonial-card-img-holder">
-                                <img src="assets/imgs/isha_druv.png" class="testimonial-card-img" alt="Isha Druv">
-                            </div>
-                            <h6 class="testimonial-card-title">Isha Druv</h6>
-                            <p class="testimonial-card-role">Automation Engineer, Accenture</p>
-                            <div class="testimonial-arrow">
-                                <i class="ti-angle-down"></i>
-                            </div>
-                        </div>
-                        <div class="testimonial-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
-                            <p class="testimonial-card-subtitle"> I've had the pleasure of working with Divyans at Accenture, where his expertise in automation and keen eye for identifying bugs were invaluable, combined with his excellent communication skills, has been invaluable to our team. Beyond his technical abilities, Divyans consistently displays a positive attitude and professionalism.</p>
+                            <h6 class="testimonial-card-title">Rehan Mukadam</h6>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </div> <!-- end of container -->
+    </section> <!-- end of testimonial section -->
 
-    <!-- leadership section -->
-    <section class="section pt-0" id="leadership">
-        <div class="container text-center">
-            <p class="section-subtitle">Beyond Professional Life</p>
-            <h6 class="section-title mb-6">Leadership & Extra-curricular</h6>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="leadership-card">
-                        <div class="leadership-img-wrapper">
-                            <img src="assets/imgs/IMG_3778.JPG" class="leadership-img" alt="Leadership Activities">
-                        </div>
-                        <div class="leadership-content">
-                            <h5 class="leadership-title">VP Operation APMC Club</h5>
-                            <p class="leadership-summary">
-                                As VP of Operations at APMC, I orchestrated the logistical framework for our signature events including Northstar, Meteor, Protothon, and our annual Product Conference, which featured 46 industry speakers and attracted 500 attendees from across the product management ecosystem.
-                            </p>
-                            <div class="leadership-arrow" onclick="toggleLeadership(this)">
-                                <i class="ti-angle-down"></i>
-                            </div>
-                            <div class="leadership-description" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
-                                <span style="font-weight: 900;">•</span> Developed comprehensive event management systems for our Product Conference, coordinating venue arrangements, speaker schedules, registration processes, and attendee engagement initiatives that showcased diverse product management experiences<br>
-                                <span style="font-weight: 900;">•</span> Led cross-functional teams to execute UX-focused workshops like Northstar and Protothon, creating immersive learning environments that strengthened participants' design thinking capabilities<br>
-                                <span style="font-weight: 900;">•</span> Implemented efficient resource allocation strategies for Meteor events, ensuring optimal utilization of club budget, volunteer staffing, and technical infrastructure<br>
-                                <span style="font-weight: 900;">•</span> Established streamlined communication protocols between organizing committee members, speakers, and attendees, resulting in seamless event experiences and positive feedback<br>
-                                <span style="font-weight: 900;">•</span> Collaborated with fellow club leaders to integrate event logistics with broader club initiatives, contributing significantly to APMC's reputation as a premier product management community at Northeastern
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="leadership-card">
-                        <div class="leadership-img-wrapper">
-                            <img src="assets/imgs/solar.jpg" class="leadership-img" alt="Automobile Enthusiast">
-                        </div>
-                        <div class="leadership-content">
-                            <h5 class="leadership-title">Automobile Enthusiast</h5>
-                            <p class="leadership-summary">
-                                My passion for automobiles extends beyond mere appreciation into hands-on engineering and innovation. As an active member of SAEINDIA, India's leading resource for mobility technology, I've channeled my enthusiasm into practical applications through competitive challenges.
-                            </p>
-                            <div class="leadership-arrow" onclick="toggleLeadership(this)">
-                                <i class="ti-angle-down"></i>
-                            </div>
-                            <div class="leadership-description" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out;">
-                                <span style="font-weight: 900;">•</span> Designed and constructed a solar-powered, coupe-style four-wheeler using SolidWorks and CAD for comprehensive chassis design and testing, achieving 16th place nationally<br>
-                                <span style="font-weight: 900;">•</span> Engineered a dual-motor rear-wheel drive system integrated with lithium-ion battery packs and regenerative braking to maximize energy efficiency<br>
-                                <span style="font-weight: 900;">•</span> Created a custom instrument cluster using Arduino that calibrated multiple sensors and displayed real-time performance metrics through a 3D-printed dashboard<br>
-                                <span style="font-weight: 900;">•</span> Secured 80% of required project funding through strategic pitching to sponsors, demonstrating both technical knowledge and business acumen<br>
-                                <span style="font-weight: 900;">•</span> Collaborated across multidisciplinary teams to solve complex engineering challenges, from solar panel integration to power management systems
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- end of leadership section -->
 
-    <!-- contact section -->
-    <section class="section" id="contact">
-        <div class="container text-center">
-            <p class="section-subtitle">How can you communicate?</p>
-            <h6 class="section-title mb-5">Contact Me</h6>
-            <div class="contact-details col-md-10 col-lg-8 m-auto">
-                <p><strong>Email:</strong> divyansjemni@gmail.com</p>
-                <p><strong>Phone:</strong> +1-740-803-9333</p>
-                <p><strong>Address:</strong> Boston, MA</p>
-                <div class="social-links mt-3">
-                    <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a> |
-                    <a href="https://github.com/Divyans-Jemni" target="_blank">GitHub</a> |
-                    <a href="https://medium.com/@jemni.d" target="_blank">Medium</a>
-                </div>
+
+   <!-- contact section -->
+<section class="section" id="contact">
+    <div class="container text-center">
+        <p class="section-subtitle">How can you communicate?</p>
+        <h6 class="section-title mb-5">Contact Me</h6>
+        <div class="contact-details col-md-10 col-lg-8 m-auto">
+            <p><strong>Email:</strong> divyansjemni@gmail.com</p>
+            <p><strong>Phone:</strong> +1-740-803-9333</p>
+            <p><strong>Address:</strong> Boston, MA</p>
+            <div class="social-links mt-3">
+                <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/Divyans-Jemni" target="_blank">GitHub</a> |
+                <a href="https://medium.com/@jemni.d" target="_blank">Medium</a>
             </div>
         </div>
-    </section>
+    </div><!-- end of container -->
+</section><!-- end of contact section -->
     
-    <!-- visitor counter section -->
-    <section class="section pt-0" id="visitor-counter">
-        <div class="container text-center">
-            <div class="visitor-counter-card">
-                <h3 class="visitor-counter-title">Site Visitors</h3>
-                <div class="visitor-counter-number" id="visitorCount">0</div>
-                <p class="visitor-counter-text">Thank you for visiting!</p>
-            </div>
-        </div>
-    </section>
-
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
     <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
-    <script>
-        function toggleTestimonial(card) {
-            card.classList.toggle('expanded');
-            const content = card.querySelector('.testimonial-content');
-            const arrow = card.querySelector('.testimonial-arrow i');
-            
-            if (card.classList.contains('expanded')) {
-                content.style.maxHeight = content.scrollHeight + "px";
-                arrow.classList.remove('ti-angle-down');
-                arrow.classList.add('ti-angle-up');
-            } else {
-                content.style.maxHeight = "0";
-                arrow.classList.remove('ti-angle-up');
-                arrow.classList.add('ti-angle-down');
-            }
-        }
-
-        function togglePublication(card) {
-            card.classList.toggle('expanded');
-            const content = card.querySelector('.publication-content');
-            const arrow = card.querySelector('.publication-arrow i');
-            
-            if (card.classList.contains('expanded')) {
-                content.style.maxHeight = content.scrollHeight + "px";
-                arrow.classList.remove('ti-angle-down');
-                arrow.classList.add('ti-angle-up');
-            } else {
-                content.style.maxHeight = "0";
-                arrow.classList.remove('ti-angle-up');
-                arrow.classList.add('ti-angle-down');
-            }
-        }
-
-        function toggleLeadership(arrow) {
-            const card = arrow.closest('.leadership-card');
-            const content = card.querySelector('.leadership-description');
-            const icon = arrow.querySelector('i');
-            
-            if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
-                content.style.maxHeight = content.scrollHeight + "px";
-                icon.classList.remove('ti-angle-down');
-                icon.classList.add('ti-angle-up');
-            } else {
-                content.style.maxHeight = "0";
-                icon.classList.remove('ti-angle-up');
-                icon.classList.add('ti-angle-down');
-            }
-        }
-
-        // Visitor counter functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            let count = localStorage.getItem('visitorCount');
-            if (!count) {
-                count = 0;
-            }
-            count = parseInt(count) + 1;
-            localStorage.setItem('visitorCount', count);
-            document.getElementById('visitorCount').textContent = count;
-        });
-    </script>
 
 </body>
 
